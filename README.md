@@ -2,7 +2,8 @@
 Nautok 20 is a testing application created with C++ and Qt. It allows you to complete and create tests with multiple choice single or multiple select questions.
 
 
-# How to run
+# How to run the application
+
 1. Download nautok_20.zip from the latest release
 2. Extract the content
 3. Run nautok_20.exe
