@@ -52,5 +52,6 @@ radio "13 + 3 = ?" 1 4 "16" "17" "18" "19"
 This test will have 4 single select questions and 1 multiple select question. You can find this in release archive with the name "algebra.test", so it is possible to run.
 
 # Few details
-By default, test answers and questions are randomly shuffled. Currently, it is impossible to turn of this function with getting into source files.
+By default, test answers and questions are randomly shuffled. Currently, it is impossible to turn of this function with getting into source files. 
+
 I am currently working on test constructor, so it will be easier to create and format tests.
