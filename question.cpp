@@ -47,7 +47,7 @@ Question::Question(MainWindow *parent, QString text, int n, int ans, QVector<QSt
         {
             QPushButton *prevButton = new QPushButton("Previous");
             connect(prevButton, SIGNAL(clicked()), this, SLOT(switchToPrevious()));
-            prevButton->setToolTip(tr("Попереднє питання"));
+            prevButton->setToolTip(tr("Previous question"));
             buttonsLayout->addWidget(prevButton);
         }
         else {
@@ -58,7 +58,7 @@ Question::Question(MainWindow *parent, QString text, int n, int ans, QVector<QSt
         {
             QPushButton *nextButton = new QPushButton("Next");
             connect(nextButton, SIGNAL(clicked()), this, SLOT(switchToNext()));
-            nextButton->setToolTip(tr("Наступне питання"));
+            nextButton->setToolTip(tr("Next question"));
             buttonsLayout->addWidget(nextButton);
         }
         else{
@@ -75,7 +75,7 @@ Question::Question(MainWindow *parent, QString text, int n, int ans, QVector<QSt
 
         QPushButton *finishButton = new QPushButton("Finish");
         connect(finishButton, SIGNAL(clicked()), this, SLOT(switchToFinish()));
-        finishButton->setToolTip(tr("Закінчити тестування"));
+        finishButton->setToolTip(tr("Finish the test"));
         layout->addWidget(finishButton);
 
         this->setLayout(layout);
@@ -103,7 +103,7 @@ Question::Question(MainWindow *parent, QString text, int n, int ans, QVector<QSt
         {
             QPushButton *prevButton = new QPushButton("Previous");
             connect(prevButton, SIGNAL(clicked()), this, SLOT(switchToPrevious()));
-            prevButton->setToolTip(tr("Попереднє питання"));
+            prevButton->setToolTip(tr("Previous question"));
             buttonsLayout->addWidget(prevButton);
         }
         else {
@@ -114,7 +114,7 @@ Question::Question(MainWindow *parent, QString text, int n, int ans, QVector<QSt
         {
             QPushButton *nextButton = new QPushButton("Next");
             connect(nextButton, SIGNAL(clicked()), this, SLOT(switchToNext()));
-            nextButton->setToolTip(tr("Наступне питання"));
+            nextButton->setToolTip(tr("Next question"));
             buttonsLayout->addWidget(nextButton);
         }
         else{
@@ -131,7 +131,7 @@ Question::Question(MainWindow *parent, QString text, int n, int ans, QVector<QSt
 
         QPushButton *finishButton = new QPushButton("Finish");
         connect(finishButton, SIGNAL(clicked()), this, SLOT(switchToFinish()));
-        finishButton->setToolTip(tr("Закінчити тестування"));
+        finishButton->setToolTip(tr("Finish the test"));
         layout->addWidget(finishButton);
 
         this->setLayout(layout);
@@ -161,7 +161,7 @@ void Question::switchToFinish()
 {
     QMessageBox msgBox;
     msgBox.setText("Test is completed");
-    msgBox.setInformativeText("Do you want to save your answers");
+    msgBox.setInformativeText("Do you want to verify your answers?");
     msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
     msgBox.setDefaultButton(QMessageBox::No);
     int ret = QMessageBox::warning(this, "Finish the test", "Do you want to finish the test?", QMessageBox::Yes | QMessageBox::No);
@@ -169,7 +169,7 @@ void Question::switchToFinish()
     {
         this->parent->centralWidget()->setParent(nullptr);
         QVBoxLayout *finishWidgetLayout = new QVBoxLayout;
-        QLabel *finishText = new QLabel("Тестування завершено.\nВаш результат: " + QString::number(countAnswers()) + "%");
+        QLabel *finishText = new QLabel("Test has been finished.\nYour result: " + QString::number(countAnswers()) + "%");
         finishText->setAlignment(Qt::AlignCenter);
         finishWidgetLayout->addWidget(finishText);
 

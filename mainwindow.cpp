@@ -61,12 +61,12 @@ MainWindow::MainWindow(QWidget *parent) :
 {
 
     QVBoxLayout *welcomeWidgetLayout = new QVBoxLayout;
-    QLabel *welcomeText = new QLabel("Вітаємо у программі тестування.\nНатисніть кнопку, щоб розпочати тест.");
+    QLabel *welcomeText = new QLabel("Welcome to the testing application Nautok 20.\nSelect the test.");
     welcomeText->setAlignment(Qt::AlignCenter);
     welcomeWidgetLayout->addWidget(welcomeText);
 
     QHBoxLayout *browseLayout = new QHBoxLayout;
-    QLabel *browseText = new QLabel("Обрано тест:");
+    QLabel *browseText = new QLabel("Selected test:");
     browseText->setAlignment(Qt::AlignLeft);
     browseLayout->addWidget(browseText);
 
@@ -211,12 +211,12 @@ void MainWindow::chooseFile()
 
 
     QVBoxLayout *welcomeWidgetLayout = new QVBoxLayout;
-    QLabel *welcomeText = new QLabel("Вітаємо у программі тестування.\nНатисніть кнопку, щоб розпочати тест.");
+    QLabel *welcomeText = new QLabel("Welcome to the testing application Nautok 20.\nSelect the test.");
     welcomeText->setAlignment(Qt::AlignCenter);
     welcomeWidgetLayout->addWidget(welcomeText);
 
     QHBoxLayout *browseLayout = new QHBoxLayout;
-    QLabel *browseText = new QLabel("Обрано тест:");
+    QLabel *browseText = new QLabel("Selected test:");
     browseText->setAlignment(Qt::AlignLeft);
     browseLayout->addWidget(browseText);
 
@@ -231,9 +231,9 @@ void MainWindow::chooseFile()
     welcomeWidgetLayout->addLayout(browseLayout);
 
 
-    QPushButton *startButton = new QPushButton("Розпочати тест");
+    QPushButton *startButton = new QPushButton("Start");
     connect(startButton, SIGNAL(clicked()), SLOT(switchToFirstWidget()));
-    startButton->setToolTip(tr("Розпочати тест"));
+    startButton->setToolTip(tr("Start the test"));
     welcomeWidgetLayout->addWidget(startButton);
 
     welcomeWidget = new QWidget;
