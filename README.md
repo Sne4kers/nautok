@@ -25,6 +25,8 @@ All tests are should be formatted in exact way with .test file extension
 ```
 <type> <question> <number of right answers> <total number of answers> [right answer 1] [right answer 2] ... [right answer <last>] [wrong answer 1] [wrong answer 2] ...
 ```
+Each question should be in exactly one line.
+
 #### Type
 There can be 2 types:
 - "multi" used for multiple choice multi select questions.
@@ -51,3 +53,4 @@ This test will have 4 single select questions and 1 multiple select question. Yo
 
 # Few details
 By default, test answers and questions are randomly shuffled. Currently, it is impossible to turn of this function with getting into source files.
+I am currently working on test constructor, so it will be easier to create and format tests.
